@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">MyOnlineShop</string>
+    <string name="introTitle">Welcome to <font color="#bd4c4c">\n My Online Shopping Application</font></string>
+    <string name="introSubtitle">Enjoy fast, free shipping</string>
+    <string name="startButtonText">Start Shopping</string>
+</resources>
