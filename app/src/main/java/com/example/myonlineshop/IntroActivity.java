@@ -12,7 +12,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.example.myonlineshop.databinding.ActivityIntroBinding;
 
-public class IntroActivity extends AppCompatActivity {
+public class IntroActivity extends BaseActivity {
 
         private ActivityIntroBinding binding;
     @Override
