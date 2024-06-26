@@ -1,14 +1,9 @@
-package com.example.myonlineshop;
+package com.example.myonlineshop.Activity;
 
 import android.os.Bundle;
 import android.view.View;
 
-import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -19,7 +14,7 @@ import com.example.myonlineshop.Adapter.CategoryAdapter;
 import com.example.myonlineshop.Adapter.PopularAdapter;
 import com.example.myonlineshop.Adapter.SliderAdapter;
 import com.example.myonlineshop.Domain.CategoryDomain;
-import com.example.myonlineshop.Domain.ItemDomain;
+import com.example.myonlineshop.Domain.ItemsDomain;
 import com.example.myonlineshop.Domain.SliderItems;
 import com.example.myonlineshop.databinding.ActivityMainBinding;
 import com.google.firebase.database.DataSnapshot;
@@ -47,14 +42,14 @@ public class MainActivity extends BaseActivity {
     private void initPopular() {
         DatabaseReference myRef=database.getReference("Items");
         binding.progressBarPopular.setVisibility(View.VISIBLE);
-        ArrayList<ItemDomain> items=new ArrayList<>();
+        ArrayList<ItemsDomain> items=new ArrayList<>();
 
         myRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (snapshot.exists()){
                     for(DataSnapshot issue:snapshot.getChildren()){
-                        items.add(issue.getValue(ItemDomain.class));
+                        items.add(issue.getValue(ItemsDomain.class));
                     }
                     if(!items.isEmpty()){
                         binding.recyclerViewPopularProducts.setLayoutManager(new GridLayoutManager(MainActivity.this,2));

@@ -3,7 +3,7 @@ package com.example.myonlineshop.Domain;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-public class ItemDomain implements Serializable {
+public class ItemsDomain implements Serializable {
     private  String title;
     private String description;
     private ArrayList<String> picUrl;
@@ -11,12 +11,12 @@ public class ItemDomain implements Serializable {
     private double oldPrice;
     private int review;
     private double rating;
-    private int NumberInCart;
+    private int NumberinCart;
 
-    public ItemDomain() {
+    public ItemsDomain() {
     }
 
-    public ItemDomain(String title, String description, ArrayList<String> picurl, double price, double oldPrice, int review, double rating) {
+    public ItemsDomain(String title, String description, ArrayList<String> picurl, double price, double oldPrice, int review, double rating) {
         this.title = title;
         this.description = description;
         this.picUrl = picurl;
@@ -82,11 +82,11 @@ public class ItemDomain implements Serializable {
         this.rating = rating;
     }
 
-    public int getNumberInCart() {
-        return NumberInCart;
+    public int getNumberinCart() {
+        return NumberinCart;
     }
 
-    public void setNumberInCart(int numberInCart) {
-        NumberInCart = numberInCart;
+    public void setNumberinCart(int numberinCart) {
+        NumberinCart = numberinCart;
     }
 }

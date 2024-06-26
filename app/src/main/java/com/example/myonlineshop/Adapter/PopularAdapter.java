@@ -11,16 +11,16 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.CenterCrop;
 import com.bumptech.glide.request.RequestOptions;
-import com.example.myonlineshop.Domain.ItemDomain;
+import com.example.myonlineshop.Domain.ItemsDomain;
 import com.example.myonlineshop.databinding.ViewholderPopularBinding;
 
 import java.util.ArrayList;
 
 public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.Viewholder> {
-    ArrayList<ItemDomain> items;
+    ArrayList<ItemsDomain> items;
     Context context;
 
-    public PopularAdapter(ArrayList<ItemDomain> items) {
+    public PopularAdapter(ArrayList<ItemsDomain> items) {
         this.items = items;
     }
 
