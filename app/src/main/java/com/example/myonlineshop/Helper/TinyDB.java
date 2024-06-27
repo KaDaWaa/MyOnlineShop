@@ -31,7 +31,7 @@ import android.preference.PreferenceManager;
 import android.text.TextUtils;
 import android.util.Log;
 
-import com.example.project1861.Domain.ItemsDomain;
+import com.example.myonlineshop.Domain.ItemsDomain;
 import com.google.gson.Gson;
 
 import java.io.File;

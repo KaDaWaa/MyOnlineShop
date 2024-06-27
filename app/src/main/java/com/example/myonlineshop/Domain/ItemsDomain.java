@@ -3,7 +3,7 @@ package com.example.myonlineshop.Domain;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-public class ItemsDomain implements Serializable {
+public class ItemsDomain implements Serializable{
     private  String title;
     private String description;
     private ArrayList<String> picUrl;

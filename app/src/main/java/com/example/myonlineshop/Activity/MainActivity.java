@@ -1,5 +1,6 @@
 package com.example.myonlineshop.Activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -37,6 +38,14 @@ public class MainActivity extends BaseActivity {
         initCategory();
         initPopular();
 
+        bottomNavigation();
+
+    }
+
+    private void bottomNavigation() {
+        binding.cartButton.setOnClickListener(v -> {
+            startActivity(new Intent(MainActivity.this, CartActivity.class));
+        });
     }
 
     private void initPopular() {

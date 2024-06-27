@@ -1,6 +1,7 @@
 package com.example.myonlineshop.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Paint;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.CenterCrop;
 import com.bumptech.glide.request.RequestOptions;
+import com.example.myonlineshop.Activity.ItemDetailsActivity;
 import com.example.myonlineshop.Domain.ItemsDomain;
 import com.example.myonlineshop.databinding.ViewholderPopularBinding;
 
@@ -48,6 +50,12 @@ public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.Viewhold
                 .load(items.get(position).getPicUrl().get(0))
                 .apply(options)
                 .into(holder.binding.popularPic);
+
+        holder.itemView.setOnClickListener(v->{
+            Intent intent=new Intent(context, ItemDetailsActivity.class);
+            intent.putExtra("object",items.get(position));
+            context.startActivity(intent);
+        });
     }
 
     @Override

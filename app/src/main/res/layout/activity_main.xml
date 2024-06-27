@@ -91,6 +91,7 @@
                     android:layout_height="match_parent"
                     android:paddingStart="24dp"
                     android:paddingEnd="24dp"
+                    android:background="@drawable/grey_bg"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -273,6 +274,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:id="@+id/cartButton"
                     android:layout_weight="0.25"
                     android:orientation="vertical">
 
